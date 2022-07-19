@@ -27,7 +27,7 @@ public class Main {
                         for (int j = 1; j <= length; j++) {
                             System.out.print("*");
                         }
-                    System.out.println("\n");
+                    System.out.print("\n");
                     }
                     break;
                 case 2:
