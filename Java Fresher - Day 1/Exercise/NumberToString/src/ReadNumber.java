@@ -109,8 +109,31 @@ public class ReadNumber {
 
             String htens = null, hones = null;
 
+            //doc cac so tu 110 - 119
+            if (hnumber_tens == 1){
+                hones = "";
+                switch (hnumber_ones){
+                    case 0 -> htens = "Ten";
+                    case 1 -> htens = "Eleven";
+                    case 2 -> htens = "Twelve";
+                    case 3 -> htens = "Thirteen";
+                    case 4 -> htens = "Fourteen";
+                    case 5 -> htens = "Fifteen";
+                    case 6 -> htens = "Sixteen";
+                    case 7 -> htens = "Seventeen";
+                    case 8 -> htens = "Eighteen";
+                    case 9 -> htens = "Nineteen";
+                    default -> System.out.println("Valid number");
+                }
+
+            }
+
+            // neu so khong phai tu 110 -119
+            else
+            {
             // doc so hang chuc
             switch (hnumber_tens) {
+                case 0 -> htens = "";
                 case 2 -> htens = "Twenty";
                 case 3 -> htens = "Thirty";
                 case 4 -> htens = "Forty";
@@ -121,6 +144,7 @@ public class ReadNumber {
                 case 9 -> htens = "Ninety";
                 default -> System.out.println("Valid number");
             }
+
             // doc so hang don vi
             switch (hnumber_ones) {
                 case 0 -> hones = "";
@@ -135,9 +159,13 @@ public class ReadNumber {
                 case 9 -> hones = "Nine";
                 default -> System.out.println("Valid number");
             }
+            }
 
             // doc so
-            System.out.printf("%s Hundred and %s %s",hhunderd,htens,hones);
+            if (number % 100 == 0) System.out.printf("%s Hundred",hhunderd);
+            else {
+                System.out.printf("%s Hundred and %s %s",hhunderd,htens,hones);
+            }
         }
         else
         {
