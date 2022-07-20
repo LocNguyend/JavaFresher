@@ -1,19 +1,15 @@
 import java.util.*;
 
-public class Main {
+public class AddElement{
 
     public static int[] addElement(int index, int arr[], int x){
         int resArray[] = new int[arr.length+1];
-        for (int i = 1; i < resArray.length; i++){
-            if(i < index - 1) {
-                resArray[i] = arr[i];
-            }
-            else if (i == index - 1) {
-                resArray[i] = x;
-            }
-            else {
-                resArray[i] = arr[i-1];
-            }
+        for (int i = 0; i < index; i++){
+            resArray[i] = arr[i];
+        }
+        resArray[index] = x;
+        for (int i = index+1; i < resArray.length;i++){
+            resArray[i] = arr[i-1];
         }
         return resArray;
     }

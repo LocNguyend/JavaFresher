@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Merge {
     public static void printArray(int array[]){
         for (int j = 0; j< array.length; j++){
             System.out.print(array[j]+"\t");

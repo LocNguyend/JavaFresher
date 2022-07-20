@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class SumColumn {
 
     public static void printMatrix(double[][] matrix){
         for (int i = 0; i < matrix.length; i++){

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class MinArray {
 
     public static void printArray(int array[]){
         for (int j = 0; j< array.length; j++){

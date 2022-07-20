@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class main {
+public class Delete {
 
     public static int indexDel (int array[], int element){
         int index = -1;

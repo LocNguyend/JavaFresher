@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class CountChar {
 
     public static void main(String[] args) {
         String example = "This is a sample string";

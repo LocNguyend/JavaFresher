@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class MaxMatrix {
 
     public static double findMax(double mat[][]){
         double max = mat[0][0];
