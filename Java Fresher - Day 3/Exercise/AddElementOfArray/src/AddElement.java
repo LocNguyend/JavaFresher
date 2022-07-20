@@ -2,8 +2,8 @@ import java.util.*;
 
 public class AddElement{
 
-    public static int[] addElement(int index, int arr[], int x){
-        int resArray[] = new int[arr.length+1];
+    public static int[] addElement(int index, int[] arr, int x){
+        int[] resArray = new int[arr.length+1];
         for (int i = 0; i < index; i++){
             resArray[i] = arr[i];
         }
@@ -14,7 +14,7 @@ public class AddElement{
         return resArray;
     }
 
-    public static void printArray(int array[]){
+    public static void printArray(int[] array){
         for (int j = 0; j< array.length; j++){
             System.out.print(array[j]+"\t");
         }
