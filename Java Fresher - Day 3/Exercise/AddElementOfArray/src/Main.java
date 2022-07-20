@@ -4,14 +4,19 @@ public class Main {
 
     public static int[] addElement(int index, int arr[], int x){
         int resArray[] = new int[arr.length+1];
-        int k = 0;
-        for (int i = 0; i < resArray.length; i++){
-            if(i < index - 1) resArray[i] = arr[i];
-            else if (i == index - 1) resArray[i] = x;
-            else resArray[i] = arr[i-1];
+        for (int i = 1; i < resArray.length; i++){
+            if(i < index - 1) {
+                resArray[i] = arr[i];
             }
-        return resArray;
+            else if (i == index - 1) {
+                resArray[i] = x;
+            }
+            else {
+                resArray[i] = arr[i-1];
+            }
         }
+        return resArray;
+    }
 
     public static void printArray(int array[]){
         for (int j = 0; j< array.length; j++){
@@ -29,11 +34,12 @@ public class Main {
 
         // Nhap mang
         int i = 0;
-        while (i<array.length){
-            System.out.println("Enter element " + (i+1) + ": ");
+        while (i < array.length){
+            System.out.println("Enter element " + i + ": ");
             array[i] = scanner.nextInt();
             i++;
         }
+
         System.out.println("Array: ");
         printArray(array);
 

@@ -2,7 +2,7 @@ import java.util.*;
 
 public class main {
 
-    public static int index (int array[], int element){
+    public static int indexDel (int array[], int element){
         int index = -1;
         for (int i = 0; i<array.length; i++){
             if(array[i] == element){
@@ -30,7 +30,7 @@ public class main {
         // Nhap mang
         int i = 0;
         while (i<array.length){
-            System.out.println("Enter element " + (i+1) + ": ");
+            System.out.println("Enter element " + i + ": ");
             array[i] = scanner.nextInt();
             i++;
         }
@@ -42,7 +42,7 @@ public class main {
         int deleteValue = scanner.nextInt();
 
         // Kiem tra co phan tu X trong mang, co thi xoa, khong thi in lai mang ban dau
-        int del_index = index(array,deleteValue);
+        int del_index = indexDel(array,deleteValue);
 
         if (del_index < 0){
             System.out.println("Not found delete value on array");

@@ -2,6 +2,15 @@ import java.util.*;
 
 public class Main {
 
+    public static int[] reverseArray(int[] array){
+        for (int j = 0; j < array.length/2; j++){
+            int temp = array[j];
+            array[j] = array[array.length-1-j];
+            array[array.length-1-j]=temp;
+        }
+        return array;
+    }
+
     public static void main(String[] args) {
         int size;
         int[] array;
@@ -19,16 +28,10 @@ public class Main {
             array[i] = scanner.nextInt();
             i++;
         }
+
         System.out.printf("%-20s%s","Elements in array: ","");
         for (int j = 0; j< array.length; j++){
             System.out.print(array[j]+"\t");
-        }
-
-        //doi vi tri phan tu j voi size-1-j
-        for (int j = 0; j < array.length/2; j++){
-            int temp = array[j];
-            array[j] = array[size-1-j];
-            array[size-1-j]=temp;
         }
 
         System.out.printf("\n%-20s%s","Reverse array: ","");
